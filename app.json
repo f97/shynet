@@ -14,9 +14,6 @@
   "logo": "https://github.com/milesmcc/shynet/raw/master/images/slogo.png",
   "success_url": "/",
   "stack": "container",
-  "addons": [
-    "heroku-postgresql:hobby-dev"
-  ],
   "formation": {
     "web": {
       "quantity": 1,
@@ -24,30 +21,10 @@
     }
   },
   "env": {
-    "DB_NAME": {
+    "DATABASE_URL": {
       "description": "Postgres database name (not required if using Postgres addon)",
-      "value": "shynet",
-      "required": false
-    },
-    "DB_USER": {
-      "description": "Postgres database username (not required if using Postgres addon)",
       "value": "",
-      "required": false
-    },
-    "DB_PASSWORD": {
-      "description": "Postgres database password (not required if using Postgres addon)",
-      "value": "",
-      "required": false
-    },
-    "DB_HOST": {
-      "description": "Postgres database hostname (not required if using Postgres addon)",
-      "value": "",
-      "required": false
-    },
-    "DB_PORT": {
-      "description": "Postgres database port (not required if using Postgres addon)",
-      "value": "5432",
-      "required": false
+      "required": true
     },
     "EMAIL_HOST": {
       "description": "SMTP server hostname (for sending emails)",
